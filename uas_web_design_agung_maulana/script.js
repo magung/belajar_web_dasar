@@ -29,3 +29,5 @@ function f_split2($datas){
     $datas.pop();
     return $datas;
 }
+
+

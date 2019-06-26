@@ -11,9 +11,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <title>Web Design</title>
-</head>
-<body>
+<!--
 
+UAS WEB DESIGN
+
+1.	Buat sebuah database dengan nama web_design, kemudian di dalam database tersebut buat sebuah tabel dengan kolom nama, tempat_lahir, tanggal_lahir, jenis_kelamin. Type field silakan anda tentukan sendiri.
+2.	Isi table tersebut dengan data minimal 15 rekord.
+3.	Buat sebuah tampilan tabel di halaman web untuk menampilkan tabel di atas dengan ketemtuan sebagai berikut:
+a.	Nama ditampilkan menggunakan huruf besar semua
+b.	Tempat lahir dan tanggal lahir ditampilkan bergabung dengan format tempat lahir, tanggal lahir, contoh Bogor, 17 Agustus 2000. 
+4.	Tamplikan tabel tersebut dalam kotak div, dengan ketentuan sebagai berikut:
+a.	Kotak div diatur tingginya sedemikian rupa sehingga hnya mampu menampilkan 10 rekord, dan jika akan melihat record berikutnya harus scolling.
+b.	Harus ada ruang kosong antara div dengan table minimal 10 px.
+5.	Gunakan bootstrap dan fungsi buatan ada sendiri (php dan/atau javascript) jika diperlukan.
+
+
+
+-->
+
+
+
+</head>
+<body style="margin-top:100px;background-color:#f2f2f2;">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="navbar-brand" href="#">Web Design</a>
+    </li>
+    
+  </ul>
+</nav>
 
 <div class='container' >
     <button class='btn btn-primary btn-sm' onclick=f_bukatabel2()>
@@ -22,16 +49,20 @@
     <button class='btn btn-success btn-sm' onclick=f_bukatabel('Laki-Laki')>
     Laki-Laki
     </button>
-    <button class='btn btn-danger btn-sm' onclick=f_bukatabel('Perempuan')>
+    <button class='btn btn-success btn-sm' onclick=f_bukatabel('Perempuan')>
     Perempuan
     </button>
-
+    <br>
     <div 
         class='container' 
         id="kotak" 
         style="border:solid 1px;height:535px;overflow-y:scroll">
     </div>
 </div>
+
+  <div class=" text-center navbar-expand-sm bg-dark navbar-dark fixed-bottom">
+  <a class="navbar-brand" href="#">Agung Maulana</a>
+  </div>
 
 
 
@@ -81,7 +112,7 @@ function baca_data(){
         "<th>Jenis Kelamin</th>".
         "<tr>";
 			
-	$data="<table class='table table-striped'>$header$data</table>";
+	$data="<table class='table table-striped table-success'>$header$data</table>";
 	
 	return $data;
 }
